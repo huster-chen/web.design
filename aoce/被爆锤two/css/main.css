@@ -1,0 +1,130 @@
+.main{
+    height: 900px;
+    /* background: #ccc; */
+    font-size: 15px;
+}
+
+.main .container {
+    
+    display: flex;
+    /* 启用 flexbox 布局 */
+    justify-content: space-around;
+    /* 在这三块之间添加等量的空间 */
+    text-align: center;
+}
+
+.fcard {
+    flex-basis: 30%;
+    /* 控制每一块的基本宽度，你可以根据你的具体需求来改变这个数字 */
+    /* outline: 1px solid ; */
+    margin-left: 100px;
+    background: rgb(250, 249, 250);
+    border-radius: 10px;
+}
+.dark .fcard {
+    color: #d6bfbf!important;
+    background: rgb(1, 5, 1);
+}
+
+.fcard :last-child{
+    margin-right: 100px;
+}
+.main .hidden{
+    background: rgb(253, 244, 254);
+    color: rgb(196, 165, 247);
+    border-radius: 2px;
+    display: none;
+    position: absolute;
+}
+.main h2{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: -100px;
+}
+.main h1{
+    font-size: 50px;
+    display: inline-block;
+    margin-left: -10px;
+}
+.main span{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.main .signin{
+    width: 300px;
+    height: 62px;
+    /* outline: 1px solid ; */
+    
+    margin:0 auto ;
+}
+.signin button{
+    width: 300px;
+    height: 62px;
+    border-radius: 20px;
+    font-size: 20px;
+    background: rgb(110, 71, 236);
+    color: #fff;
+    
+}
+.signin button:hover{
+    background: rgb(124, 90, 236);
+    color: #fff;
+}
+.main ul{
+    
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    
+    display: block;
+    
+}
+.main .fu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main .fu>li {
+    margin: 10px 0;
+    background: url('./img/24gf-circle.png') no-repeat left center;
+        background-size: 12px 12px;
+    
+}
+
+.main .su {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.main .su>li {
+    background: url('./img/对号.png') no-repeat left center;
+    background-size: 12px 12px;
+        /* 修改这一行，设置图像的大小 */
+    padding-left: 30px;
+}
+.main .su>li:last-child{
+    display: none !important;
+}
+.main .fu .hhh {
+    display: inline-block;
+}
+.main .choosebbb {
+    width: 200px;
+    height: 50px;
+    /* outline: 1px solid ; */
+
+    margin: 0 auto;
+}
+.choosebbb button {
+
+    width: 200px;
+    height: 50px;
+    border-radius: 10px ;
+    border: 2px solid rgb(160, 67, 86);
+    font-size: 20px;
+
+}
+.choosebbb button:hover{
+    background: rgb(160, 67, 86);
+    color: #fff;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧校园</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+.container {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 200px; height: 200px;
+  transform-origin: center;
+}
+
+.ball {
+  background-color: red;
+  position: absolute;
+  top: 50%; left: 0;
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  
+  display: none;
+  
+}
+ .ball1{
+    background-color: rgb(247, 110, 204);
+    filter: blur(10px);
+    
+}
+
+ .ball2{
+    background-color:rgb(158, 197, 255);
+    filter: blur(15px);
+    
+}
+ .ball3{
+    background-color:rgb(145, 252, 247);
+    filter: blur(10px);
+    
+}
+#container1 {
+  animation: circle 1s linear infinite;
+}
+
+#container2 {
+  animation: circle 2s linear infinite;
+}
+
+#container3 {
+  animation: circle 3s linear infinite;
+}
+
+@keyframes circle {
+  0% { transform: rotate(0deg); }
+  50%{ border-top-left-radius: 45%;
+    border-bottom-right-radius: 45%;}
+  100% { transform: rotate(360deg); }
+  
+}
+.switch {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  z-index: 10;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.boxx{
+    position: relative;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(15px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+    </style>
+</head>
+<body>
+<div class="boxx">
+    <div class="board">
+<div class="container" id="container1">
+    <div class="ball ball1"></div>
+</div>
+<div class="container" id="container2">
+    <div class="ball ball2"></div>
+</div>
+<div class="container" id="container3">
+    <div class="ball ball3"></div>
+    </div>
+    </div>
+    
+    <label class="switch">
+        <input id="myCheckbox" type="checkbox">
+        <span class="slider"></span>
+    </label>
+<p>按钮</p>
+</div>
+
+
+
+
+</div>
+<script>
+    var checkbox = document.getElementById('myCheckbox');
+        var balls = document.querySelectorAll('.ball');
+        checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+                balls.forEach(function (ball) {
+                    ball.style.display = 'block';
+                });
+            } else {
+                balls.forEach(function (ball) {
+                    ball.style.display = 'none';
+                });
+            }
+        });
+</script>
+</body>
+</html>

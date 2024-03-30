@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <label class="slider fr">
+        <input type="checkbox" id="toggleSwitchl">
+        <span class="slider-button"></span>
+    </label>
+
+    <div class="talk fr">
+        <img src="./css/img/icons8-genshin-impact-64.png" alt="">
+        <div class="talkboard">
+            
+        </div>
+    </div>
+    <div class="plan">
+        <div class="container">
+            <p>Your current plan:</p>
+            <br><b>Uniqueweb-</b>
+        </div>
+    </div>
+    <div class="choose">
+        <div class="container">
+            <b>Choose your plan:</b><br>
+        <div class="slider-container">
+                <span id="build-monthly">Build monthly</span>
+            <label class="slider">
+                
+                <input type="checkbox" id="toggleSwitch">
+                <span class="slider-button"></span>
+                
+            </label>
+            <span id="build-annually">Build annually(Save 38%)</span>
+        </div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="container ">
+            <div class="fcard clearfix">
+                <div class="hidden fr">Save %17</div>
+                <h2>Starter</h2>
+                <h1>$8.3</h1><span>/mo</span>
+                <div class="signin"><button>Sign in to subscribe</button></div>
+                <ul class="fu">
+                    <li>Advantages of Uniqueweb starter</li>
+                    <li>More queries per monthl</li>
+                        
+                        <ul class="su">
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li class="hhh">Lorem ipsum dolor sit amet.</li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+                <div class="choosebbb"><button>Choose Plan</button></div>
+            </div>
+            <div class="fcard clearfix">
+                <div class="hidden fr">Save %17</div>
+                <h2 class="PPP">Pro</h2>
+                <h1>$18.3</h1><span>/mo</span>
+                <div class="signin"><button>Sign in to subscribe</button></div>
+                <ul class="fu">
+                    <li>Advantages of Uniqueweb starter</li>
+                    <li>More queries per monthl</li>
+            
+                    <ul class="su">
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li class="hhh">Lorem ipsum dolor sit amet.</li>
+            
+                    </ul>
+                    </li>
+                </ul>
+                <div class="choosebbbb choosebbb"><button>Choose Plan</button></div>
+            </div>
+            <div class="fcard clearfix">
+                <div class="hidden fr">Save %17</div>
+                <h2 class="TTT">Team</h2>
+                <h1>$8.3</h1><span>/mo</span>
+                <div class="signin"><button>Sign in to subscribe</button></div>
+                <ul class="fu">
+                    <li>Advantages of Uniqueweb starter</li>
+                    <li>More queries per monthl</li>
+            
+                    <ul class="su">
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li class="hhh">Lorem ipsum dolor sit amet.</li>
+            
+                    </ul>
+                    </li>
+                </ul>
+                <div class="choosebbbbb choosebbb"><button>Choose Plan</button></div>
+            </div>
+            
+           
+            <!-- <div class="scard"></div>
+            <div class="tcard"></div> -->
+        </div>
+    </div>
+    <script src="./Js/control.js"></script>
+    <script>
+        document.getElementById("toggleSwitchl").addEventListener("click", function(){
+            if(document.getElementById("toggleSwitchl").checked){
+                document.body.classList.add("dark");
+                
+            }else{
+                
+                document.body.classList.remove("dark");
+            }
+        }
+        )
+
+
+        document.getElementById('toggleSwitch').addEventListener('change', function () {
+                let monthly = document.getElementById('build-monthly');
+                let annually = document.getElementById('build-annually');
+                let hidden = document.querySelectorAll('.hidden');
+                let money=document.querySelectorAll('h1');
+                let choose = document.querySelector('.plan .container b')
+                console.log(choose);
+                
+                if (this.checked) {
+                    //Do something when switch is turned on
+                    monthly.style.color = "grey"
+                    annually.style.color = "red"
+                    hidden.forEach(function (element) {
+                            element.style.display = 'block';
+                })
+                money.forEach(function (element) {
+                        element.innerText =19;
+                    })
+            
+            
+            
+            
+            }
+                else {
+                    //Do something when switch is turned off
+                    monthly.style.color = "red"
+                    annually.style.color = "grey"
+                    hidden.forEach(function (element) {
+                        element.style.display = 'none';
+                    })
+
+
+                    money.forEach(function (element) {
+                        element.innerText = 666;
+                    })
+                
+                }
+            });
+            document.querySelector('.choosebbb').addEventListener('click', function (e) {
+                    let h2Text = document.querySelector('h2').innerText;   //获得h2标签的文本内容
+                    let choose = document.querySelector('.plan .container b');    //选择您要更改的元素
+                    choose.innerText = 'Uniqueweb -' + h2Text;//将h2标签的文本内容赋值给要更改元素的文本内容
+                });
+                document.querySelector('.choosebbbb').addEventListener('click', function (e) {
+                        let h2Text = document.querySelector('.PPP').innerText;   //获得h2标签的文本内容
+                        let choose = document.querySelector('.plan .container b');    //选择您要更改的元素
+                        choose.innerText = 'Uniqueweb -Pro'; //将h2标签的文本内容赋值给要更改元素的文本内容
+                    });
+                    document.querySelector('.choosebbbbb').addEventListener('click', function (e) {
+                            let h2Text = document.querySelector('.TTT').innerText;   //获得h2标签的文本内容
+                            let choose = document.querySelector('.plan .container b');    //选择您要更改的元素
+                            choose.innerText = 'Uniqueweb -Team' //将h2标签的文本内容赋值给要更改元素的文本内容
+                        });
+
+
+                
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+.plan{
+    height: 80px;
+    background:rgb(194, 54, 77);
+    color: #000;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    
+    
+}
+.dark .plan{
+    color: #000;
+}
+.plan .container {
+    width: 300px;
+}
+.choose{
+    height: 100px;
+    /* background: #ccc; */
+    text-align: center;
+    margin-top: 10px;
+    text-align: center;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 10px;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider-button {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider-button:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+#toggleSwitch:checked+.slider-button {
+    background-color: lightblue;
+}
+#toggleSwitchl:checked+.slider-button {
+    background-color: lightblue;
+}
+
+#toggleSwitchl:checked+.slider-button:before {
+    transform: translateX(26px);
+}
+.choose .slider-container{
+    margin:0 auto;
+}
+.choose .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 如果你希望里面的内容垂直排列，也可以不加这行代码 */
+    
+    /* 使.container元素占满整个屏幕的高度 */
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    /* 将.slider-container内的元素水平居中 */
+    align-items: center;
+    /* 将.slider-container内的元素垂直居中 */
+    gap: 20px;
+    margin-left:100px ;
+    /* 为.slider-container内的元素添加一些间距 */
+}
